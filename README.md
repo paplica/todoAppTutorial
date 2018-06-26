@@ -1,18 +1,49 @@
 ## 講義用メモ 
 
-bundle init 
+### railsアプリを作成する
+
+Gemfile作成
+```
+> bundle init 
+```
+
 Gemfile書き換え
-bundle install
-bundle exec rails new --skip-turbolinks --skip-test .
+```
+- # gem 'rails', '~> 5.2.0'
++ gem 'rails', '~> 5.2.0'
+```
+
+gemたちをインストール
+```  
+> bundle install
+```
+
+railsアプリを入れる
+```
+> bundle exec rails new --skip-turbolinks --skip-test .
+```
 ---
-edit Gemfile
+
+### deviseを導入する
+
+Gemfileに追記
 ```
 # Devise
 gem 'devise'
 gem 'omniauth-twitter'
 ```
-bundle install
-bundle exec rails g devise:install
+
+新規gemちゃんインストール
+```
+> bundle install
+```
+
+deviseをgenerateする
+```
+> bundle exec rails g devise:install
+```
+
+そしたらこんな表示でる
 ```
 ===============================================================================
 
@@ -44,12 +75,17 @@ Some setup you must do manually if you haven't yet:
 ===============================================================================
 ```
 
+それに従って書き換える
 ```config/environments/development.rb
 # mailer setting
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
 
-bundle rails g controller Homes index
+controllerとりあえず作成
+```
+> bundle rails g controller Homes index
+```
 
+参考の記事
 https://qiita.com/cigalecigales/items/f4274088f20832252374
 
