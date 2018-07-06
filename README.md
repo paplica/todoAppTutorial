@@ -1,10 +1,10 @@
-## 講義用メモ 
+## 講義用メモ
 
 ### railsアプリを作成する
 
 Gemfile作成
 ```
-> bundle init 
+> bundle init
 ```
 
 Gemfile書き換え
@@ -83,9 +83,8 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
 controllerとりあえず作成
 ```
-> bundle rails g controller Homes index
+> bundle rails g controller Home index
 ```
 
 参考の記事
 https://qiita.com/cigalecigales/items/f4274088f20832252374
-
