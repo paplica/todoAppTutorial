@@ -8,9 +8,9 @@ Gemfile作成
 ```
 
 Gemfile書き換え
-```
-- # gem 'rails', '~> 5.2.0'
-+ gem 'rails', '~> 5.2.0'
+```a.rb
+-  # gem 'rails', '~> 5.2.0'
++  gem 'rails', '~> 5.2.0'
 ```
 
 gemたちをインストール
@@ -115,7 +115,7 @@ deviseのUserモデルの作成
 DBをマイグレーションする
 ```
 > bundle exec rails db:migrate
-``` 
+```
 
 viewに下記のものを追加
 
@@ -153,7 +153,7 @@ bundle exec rails g migration username
 DBをマイグレーションする
 ```
 > bundle exec rails db:migrate
-``` 
+```
 
 登録するフォームを作る
 ```app/view/registration.html.erb
@@ -174,7 +174,7 @@ DBに登録できるようコントローラーに設定する
 ```
 
 viewに表示させる
-```
+```app/view/leyouts/application.html.erb
 +  <% if user_signed_in? %>
 +   こんにちは <%= current_user.username %>さん
 +  <% end %>
