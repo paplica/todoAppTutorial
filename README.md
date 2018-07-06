@@ -15,7 +15,7 @@ Gemfile書き換え
 
 gemたちをインストール
 ```  
-> bundle install
+> bundle install --path vendor/bundler
 ```
 
 railsアプリを入れる
